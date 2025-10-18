@@ -2,6 +2,10 @@ pipeline {
    agent any
 
    stages {
+      tools {
+         jdk 'jdk-11'
+         maven 'maven-3.6.3'
+  }
       stage('Build') {
         steps {
           echo 'Building...'
